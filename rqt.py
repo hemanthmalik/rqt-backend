@@ -1,8 +1,8 @@
 import asyncio
-from functools import partial, wraps
+from functools import wraps
 
 from quart import (
-    copy_current_websocket_context, Quart, render_template, 
+    Quart, render_template, 
     request, websocket
 )
 
@@ -42,7 +42,7 @@ async def ws(queue):
 @app.route('/telepath', methods=['POST'])
 async def telepath():   
     data = await request.get_json()
-    await broadcast(data.get('message', 'blank message'))
+    await broadcast(data.get('message', ''))
     return {}
 
 if __name__ == '__main__':

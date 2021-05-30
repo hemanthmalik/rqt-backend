@@ -12,7 +12,7 @@
             "ws://" + document.domain + ":" + location.port + "/ws"
         );
         ws.onmessage = function (event) {
-            document.getElementById('messages').appendChild(createListNode(event.data));
+            document.getElementById('messages').appendChild(createListNode(JSON.parse(event.data)));
         };
         function createListNode(content){
             const lNode = document.createElement('li');
