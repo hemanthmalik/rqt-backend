@@ -1,0 +1,7 @@
+QUART_APP='rqt:app'
+QUART_ENV=development
+SECRET_KEY=sadfswe35trytrejdfslf
+DB_USERNAME=username
+DB_PASSWORD=user_password
+DB_HOST=localhost
+DATABASE_NAME=rqt
