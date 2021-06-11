@@ -5,6 +5,10 @@ name = "pypi"
 
 [packages]
 quart = "*"
+sqlalchemy = "*"
+aiopg = "*"
+python-dotenv = "*"
+alembic = "*"
 
 [dev-packages]
 
